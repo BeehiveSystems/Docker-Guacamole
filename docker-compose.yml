@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+
+    db:
+        hostname: db
+        build: 
+          context: .
+        restart: always
+        volumes:
+          - './data:/var/lib/mysql'
+        environment:
+            MYSQL_DATABASE: ${SQL_DATABASE}
+            MYSQL_ROOT_PASSWORD: ${SQL_ROOT_PASSWORD}
+            MYSQL_USER: ${SQL_USER}
+            MYSQL_PASSWORD: ${SQL_PASSWORD}        
+
+    daemon:
+        hostname: daemon
+        image: guacamole/guacd:1.0.0
+        restart: always
+
+    client:
+        image: guacamole/guacamole:1.0.0
+        restart: always
+        ports: 
+          - '8080:8080'
+        environment:
+            GUACD_HOSTNAME: daemon
+            MYSQL_HOSTNAME: db
+            MYSQL_DATABASE: ${SQL_DATABASE}
+            MYSQL_USER: ${SQL_USER}
+            MYSQL_PASSWORD: ${SQL_PASSWORD}        
+        links:
+          - daemon
+          - db
+
+volumes:
+    data:
