@@ -34,6 +34,8 @@
 
 		```# chmod +x /usr/local/bin/docker-compose```
 
+- For more detail, see the [Docker documentation](https://docs.docker.com/install/linux/docker-ce/centos/) on the Docker website
+
 #### Debian
 
 1. Install Docker CE
@@ -71,6 +73,8 @@
 	- Mark the Docker Compose binary as executable
 
 		```# chmod +x /usr/local/bin/docker-compose``
+
+- For more detail, see the [Docker documentation](https://docs.docker.com/install/linux/docker-ce/debian/) on the Docker website
 
 ## Install
 
