@@ -34,6 +34,44 @@
 
 		```# chmod +x /usr/local/bin/docker-compose```
 
+#### Debian
+
+1. Install Docker CE
+
+	- Install the required packages
+
+		```# apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common```
+
+	- Add Docker's official GPG key
+
+		```# curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -```
+
+	- Add the stable repository
+
+		```# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux debian $(lsb_release -cs) stable"```
+
+	- Install Docker CE and containerd
+
+		```# apt update```
+
+		```# apt install docker-ce docker-ce-cli containerd.io```
+
+	- Start and enable Docker
+	
+		```# systemctl start docker```
+		
+		```# systemctl enable docker```
+
+2. Install Docker Compose
+
+	- Check the [current release](https://github.com/docker/compose/releases) and replace the version in URL for the command below.
+
+		```# curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
+
+	- Mark the Docker Compose binary as executable
+
+		```# chmod +x /usr/local/bin/docker-compose``
+
 ## Install
 
 1.  Initialize the MySQL Database
