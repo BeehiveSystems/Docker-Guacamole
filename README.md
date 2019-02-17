@@ -4,7 +4,7 @@
 
 #### Initializing the MySQL Database
 
-`docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --mysql > initdb.sql`
+`# docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --mysql > initdb.sql`
 
 ## Upgrade
 
