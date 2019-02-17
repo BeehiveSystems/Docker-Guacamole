@@ -8,7 +8,7 @@
 
 ## Upgrade
 
-1. Copy SQL update script from Guacamole container to host
+1. Copy SQL update script from Guacamole container to host (Note: replace `*.*.*` with the version you are upgrading to)
 
 	`# docker cp guacamole_client_1:/opt/guacamole/mysql/schema/upgrade/upgrade-pre-*.*.*.sql ./`
 
