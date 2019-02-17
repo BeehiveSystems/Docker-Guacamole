@@ -31,6 +31,7 @@
 3. Import the script into the database
 
 	```# docker exec -it guacamole_db_1 bash```
+
 	```# mysql -u root -p guacamole_db < /tmp/upgrade-pre-*.*.*.sql```
 
 4. Edit docker-compose to reflect the new version
@@ -38,4 +39,5 @@
 5. Stop the containers and start the new ones
 
 	```# docker-compose stop```
+
 	```# docker-compose up -d```
