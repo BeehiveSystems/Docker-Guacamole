@@ -1,4 +1,4 @@
-FROM mysql:5.7.24
+FROM mysql:5.7
 
 # Specifies which repo and version to pull
 ARG GUAC_REPO=apache/guacamole-client
