@@ -9,7 +9,11 @@
 2. Edit the .env file
   * Be sure to at least change the default passwords
 
-3. Start the services
+3. Build the Dockerfile
+
+	`# docker-compose build`
+
+4. Start the services
 
 	`# docker-compose up -d`
 
