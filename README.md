@@ -44,8 +44,7 @@
 
 		```# apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common```
 
-	- Add Docker's official GPG key
-
+	- Add Docker's official GPG 
 		```# curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -```
 
 	- Add the stable repository
@@ -102,11 +101,11 @@
 
 2. Copy the SQL update script from the host to the MySQL container
 
-	```# docker cp upgrade-pre-*.*.*.sql guacamole_db_1:/tmp```
+	```# docker cp upgrade-pre-*.*.*.sql guacamole_database_1:/tmp```
 
 3. Import the script into the database
 
-	```# docker exec -it guacamole_db_1 bash```
+	```# docker exec -it guacamole_database_1 bash```
 
 	```# mysql -u root -p guacamole_db < /tmp/upgrade-pre-*.*.*.sql```
 
