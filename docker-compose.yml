@@ -2,8 +2,8 @@ version: '3.7'
 
 services:
 
-    db:
-        hostname: db
+    database:
+        hostname: database
         build: 
           context: .
         restart: always
@@ -33,7 +33,7 @@ services:
             MYSQL_PASSWORD: ${SQL_PASSWORD}        
         links:
           - daemon
-          - db
+          - database
 
 volumes:
     data:
