@@ -109,7 +109,7 @@
 
 	```# mysql -u root -p guacamole_db < /tmp/upgrade-pre-*.*.*.sql```
 
-4. Edit docker-compose to reflect the new version
+4. Edit the `docker-compose.yml` file to reflect the new version
 
 5. Stop the containers and start the new ones
 
